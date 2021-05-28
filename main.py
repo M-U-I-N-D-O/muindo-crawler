@@ -21,13 +21,12 @@ def get_musinsa_item_images(url: str) -> None:
         soup = BeautifulSoup(html, 'html.parser')
         li = soup.select("#searchList > li:nth-child(1)")
 
-        for i in li:
-            print(i)
-
 url = 'https://search.musinsa.com/category/001001?device=&d_cat_cd=001001&brand=&rate=&page_kind=search&list_kind=small&sort=pop&sub_sort=&page=1&display_cnt=90&sale_goods=&ex_soldout=&color=3&price1=&price2=&exclusive_yn=&size=&tags=&sale_campaign_yn=&timesale_yn=&q='
 get_musinsa_item_images(url)
 
+from sqlalchemy import create_engine
 
+engine = create_engine('mysql+pymysql://admin:tnfkadlek1@myfirstdb.cwtu7qrvwhdo.ap-northeast-2.rds.amazonaws.com:3306/sherlockodds?charset=utf8mb4')
 
 
 
