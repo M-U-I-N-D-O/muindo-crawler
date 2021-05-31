@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from models import *
+from prev_models import *
 
 def get_item_urls(url, gender, style):
 
